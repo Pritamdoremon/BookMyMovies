@@ -3,17 +3,19 @@ package entity;
 public class Movie {
     private int movieId;
     private String title;
-    private String genre;
-    private String lang;
-    private int duration;
+    private String theaterName;
+    private String city;
+    private String showTime;
 
-    public Movie(int movieId, String title, String genre, String lang, int duration) {
+    public Movie(int movieId, String title, String theaterName, String city, String showTime) {
         this.movieId = movieId;
         this.title = title;
-        this.genre = genre;
-        this.lang = lang;
-        this.duration = duration;
+        this.theaterName = theaterName;
+        this.city = city;
+        this.showTime = showTime;
     }
+
+    // getters and setters
 
     public int getMovieId() {
         return movieId;
@@ -31,27 +33,27 @@ public class Movie {
         this.title = title;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getTheaterName() {
+        return theaterName;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setTheaterName(String theaterName) {
+        this.theaterName = theaterName;
     }
 
-    public String getLang() {
-        return lang;
+    public String getCity() {
+        return city;
     }
 
-    public void setLang(String lang) {
-        this.lang = lang;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public int getDuration() {
-        return duration;
+    public String getShowTime() {
+        return showTime;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setShowTime(String showTime) {
+        this.showTime = showTime;
     }
 }

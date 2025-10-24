@@ -2,16 +2,18 @@ package entity;
 
 public class Seat {
     private int seatId;
-    private int showId;
+    private int movieId;
     private String seatNumber;
     private boolean isBooked;
 
-    public Seat(int seatId, int showId, String seatNumber, boolean isBooked) {
+    public Seat(int seatId, int movieId, String seatNumber, boolean isBooked) {
         this.seatId = seatId;
-        this.showId = showId;
+        this.movieId = movieId;
         this.seatNumber = seatNumber;
         this.isBooked = isBooked;
     }
+
+    // getters and setters
 
     public int getSeatId() {
         return seatId;
@@ -21,12 +23,12 @@ public class Seat {
         this.seatId = seatId;
     }
 
-    public int getShowId() {
-        return showId;
+    public int getMovieId() {
+        return movieId;
     }
 
-    public void setShowId(int showId) {
-        this.showId = showId;
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
     public String getSeatNumber() {

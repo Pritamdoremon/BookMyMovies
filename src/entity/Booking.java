@@ -1,21 +1,23 @@
 package entity;
 
-import java.util.List;
+import java.sql.Timestamp;
 
 public class Booking {
     private int bookingId;
     private int userId;
-    private int showId;
-    private List<String> seatBooked;
-    private double totalPrice;
+    private int movieId;
+    private String bookedSeats;
+    private Timestamp bookingTime;
 
-    public Booking(int bookingId, int userId, int showId, List<String> seatBooked, double totalPrice) {
+    public Booking(int bookingId, int userId, int movieId, String bookedSeats, Timestamp bookingTime) {
         this.bookingId = bookingId;
         this.userId = userId;
-        this.showId = showId;
-        this.seatBooked = seatBooked;
-        this.totalPrice = totalPrice;
+        this.movieId = movieId;
+        this.bookedSeats = bookedSeats;
+        this.bookingTime = bookingTime;
     }
+
+    // getters and setters
 
     public int getBookingId() {
         return bookingId;
@@ -33,27 +35,27 @@ public class Booking {
         this.userId = userId;
     }
 
-    public int getShowId() {
-        return showId;
+    public int getMovieId() {
+        return movieId;
     }
 
-    public void setShowId(int showId) {
-        this.showId = showId;
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
-    public List<String> getSeatBooked() {
-        return seatBooked;
+    public String getBookedSeats() {
+        return bookedSeats;
     }
 
-    public void setSeatBooked(List<String> seatBooked) {
-        this.seatBooked = seatBooked;
+    public void setBookedSeats(String bookedSeats) {
+        this.bookedSeats = bookedSeats;
     }
 
-    public double getTotalPrice() {
-        return totalPrice;
+    public Timestamp getBookingTime() {
+        return bookingTime;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setBookingTime(Timestamp bookingTime) {
+        this.bookingTime = bookingTime;
     }
 }
